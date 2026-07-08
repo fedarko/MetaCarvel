@@ -1,19 +1,17 @@
 # MetaCarvel - Scaffolder for metagenomes
 
-MetaCarvel is an updated version of previous metagenome scaffolder Bambus 2. To run MetaCarvel, you will need [Python 3.7.x](https://www.python.org/downloads/), [Samtools](http://samtools.sourceforge.net), [Bedtools](http://bedtools.readthedocs.io/en/latest/), [Networkx](https://networkx.github.io/)(Version >= 2.5), [NumPy](http://www.numpy.org/),and [OGDF](http://amber-v7.cs.tu-dortmund.de/lib/exe/fetch.php/tech:ogdf-snapshot-2015-05-30.zip).
+MetaCarvel is an updated version of previous metagenome scaffolder Bambus 2. To run MetaCarvel, you will need:
 
-You can install Networkx as described [here](https://pypi.org/project/networkx/).
-MetCarvel can work with the latest NetworkX version 2.5
-Briefly, you need to run following:
-```
-pip install numpy (tested with version 1.20)
-pip install networkx>=2.5
-```
+- [Python 3.7.x](https://www.python.org/downloads/),
+- [Samtools](http://samtools.sourceforge.net),
+- [Bedtools](http://bedtools.readthedocs.io/en/latest/),
+- [NetworkX](https://networkx.github.io/) >= 2.5, and
+- [NumPy](http://www.numpy.org/).
 
-## The detailed documentation and tutorial to install and run MetaCarvel can be found on [Wiki](https://github.com/marbl/MetaCarvel/wiki).
+Detailed documentation and a tutorial for installing and running MetaCarvel are
+given on the [wiki](https://github.com/marbl/MetaCarvel/wiki).
 
-
-To run MetaCarvel, run the following;
+# Usage
 
 ```
 python run.py -h
@@ -42,9 +40,40 @@ optional arguments:
                         To generate .db file for AsmViz visualization program
 ```
 
-This will generate a bunch of files in the output directory. If you are interested in output of each step of the scaffolding process, these files can 
-be useful. The final output files are scaffolds.fasta - which contains sequences of scaffolds  and scaffolds.agp is an agp style information for assignment of contigs to scaffolds. 
+## Output
 
-Please cite MetaCarvel as follows: Ghurye, J., Treangen, T., Fedarko, M., Hervey, W. J., & Pop, M. (2019). MetaCarvel: linking assembly graph motifs to biological variants. Genome biology, 20(1), 1-14.
+Running MetaCarvel will generate many files in the output directory;
+if you are interested in the output of each step of the scaffolding process,
+these files can be useful.
 
-NOTE: This tool is still under active development and may produce errors while running. Please report these as github issues so that we can fix them as we develop the software. For any questions, please email jayg@cs.umd.edu. 
+The **final output files** are:
+
+- `scaffolds.fasta` (scaffold sequences, in FASTA format), and
+- `scaffolds.agp` (scaffold paths on contigs, in AGP format).
+
+# Publication and Citation
+
+MetaCarvel is described in
+[Ghurye _et al._, 2019](https://link.springer.com/article/10.1186/s13059-019-1791-3),
+available in _Genome Biology_.
+
+MetaCarvel can be cited as follows:
+
+```tex
+@article{metacarvel,
+  title={MetaCarvel: linking assembly graph motifs to biological variants},
+  author={Ghurye, Jay and Treangen, Todd and Fedarko, Marcus and Hervey IV, W Judson and Pop, Mihai},
+  journal={Genome Biology},
+  volume={20},
+  number={1},
+  pages={174},
+  year={2019},
+  publisher={Springer}
+}
+```
+
+# Reporting issues
+
+This tool is still under active development, and may have bugs. Please report
+these and other issues as GitHub issues, so that we can continue working to
+improve MetaCarvel.
