@@ -1,6 +1,10 @@
-# MetaCarvel - Scaffolder for metagenomes
+# MetaCarvel - a scaffolder for metagenomes
 
-MetaCarvel is an updated version of previous metagenome scaffolder Bambus 2. To run MetaCarvel, you will need:
+MetaCarvel is a successor to
+[Bambus 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC3198580/) and
+[Bambus](https://pmc.ncbi.nlm.nih.gov/articles/PMC314292/).
+
+To run MetaCarvel, you will need:
 
 - [Python 3.7.x](https://www.python.org/downloads/),
 - [Samtools](http://samtools.sourceforge.net),
@@ -54,7 +58,7 @@ The **final output files** are:
 # Publication and Citation
 
 MetaCarvel is described in
-[Ghurye _et al._, 2019](https://link.springer.com/article/10.1186/s13059-019-1791-3),
+[Ghurye _et al._, 2019](https://pmc.ncbi.nlm.nih.gov/articles/PMC6710874/),
 available in _Genome Biology_.
 
 MetaCarvel can be cited as follows:
