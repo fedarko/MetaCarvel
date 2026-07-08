@@ -1,3 +1,4 @@
-[submodule "AsmViz"]
-	path = AsmViz
-	url = https://github.com/fedarko/AsmViz
+[submodule "MetagenomeScope"]
+	path = MetagenomeScope
+	url = https://github.com/marbl/MetagenomeScope
+	branch = master

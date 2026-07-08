@@ -1,21 +1,26 @@
-# Bambus 3 - Scaffolder for metagenomes
+# MetaCarvel - Scaffolder for metagenomes
 
-Bambus3 is an updated version of previous metagenome scaffolder Bambus 2. To run Bambus 3, you will need [Samtools](http://samtools.sourceforge.net), [Bedtools](http://bedtools.readthedocs.io/en/latest/), and [Networkx](https://networkx.github.io/).
+MetaCarvel is an updated version of previous metagenome scaffolder Bambus 2. To run MetaCarvel, you will need [Python 3.7.x](https://www.python.org/downloads/), [Samtools](http://samtools.sourceforge.net), [Bedtools](http://bedtools.readthedocs.io/en/latest/), [Networkx](https://networkx.github.io/)(Version >= 2.5), [NumPy](http://www.numpy.org/),and [OGDF](http://amber-v7.cs.tu-dortmund.de/lib/exe/fetch.php/tech:ogdf-snapshot-2015-05-30.zip).
 
-To install the software, please execute following commands:
+You can install Networkx as described [here](https://pypi.org/project/networkx/).
+MetCarvel can work with the latest NetworkX version 2.5
+Briefly, you need to run following:
 ```
-cd bambus3
-make
+pip install numpy (tested with version 1.20)
+pip install networkx>=2.5
 ```
 
-To run bambus3, run the following;
+## The detailed documentation and tutorial to install and run MetaCarvel can be found on [Wiki](https://github.com/marbl/MetaCarvel/wiki).
+
+
+To run MetaCarvel, run the following;
 
 ```
 python run.py -h
-usage: run.py [-h] -a ASSEMBLY -m MAPPING -d DIR [-f FORCE] [-r REPEATS]
-              [-k KEEP] [-l LENGTH] [-b BSIZE]
+usage: run.py [-h] -a ASSEMBLY -m MAPPING -d DIR [-r REPEATS] [-k KEEP]
+              [-l LENGTH] [-b BSIZE] [-v VISUALIZATION]
 
-Bambus3: A scaffolding tool for metagenomic assemblies
+MetaCarvel: A scaffolding tool for metagenomic assemblies
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -24,21 +29,22 @@ optional arguments:
   -m MAPPING, --mapping MAPPING
                         mapping of read to contigs in bam format
   -d DIR, --dir DIR     output directory for results
-  -f FORCE, --force FORCE
-                        force re-run of pipeline, will remove any existing
-                        output
   -r REPEATS, --repeats REPEATS
                         To turn repeat detection on
-  -k KEEP, --keep KEEP  Set this to kepp temporary files in output directory
+  -k KEEP, --keep KEEP  Set this to keep temporary files in output directory
   -l LENGTH, --length LENGTH
                         Minimum length of contigs to consider for scaffolding
+                        in base pairs (bp)
   -b BSIZE, --bsize BSIZE
-                        Minium mate pair support between contigs to consider
+                        Minimum mate pair support between contigs to consider
                         for scaffolding
+  -v VISUALIZATION, --visualization VISUALIZATION
+                        To generate .db file for AsmViz visualization program
 ```
 
 This will generate a bunch of files in the output directory. If you are interested in output of each step of the scaffolding process, these files can 
 be useful. The final output files are scaffolds.fasta - which contains sequences of scaffolds  and scaffolds.agp is an agp style information for assignment of contigs to scaffolds. 
 
+Please cite MetaCarvel as follows: Ghurye, J., Treangen, T., Fedarko, M., Hervey, W. J., & Pop, M. (2019). MetaCarvel: linking assembly graph motifs to biological variants. Genome biology, 20(1), 1-14.
 
 NOTE: This tool is still under active development and may produce errors while running. Please report these as github issues so that we can fix them as we develop the software. For any questions, please email jayg@cs.umd.edu. 
