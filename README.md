@@ -14,8 +14,8 @@ To run MetaCarvel, you will need:
 - [NetworkX](https://networkx.github.io/) >= 2.5, and
 - [NumPy](http://www.numpy.org/).
 
-Detailed documentation and a tutorial for installing and running MetaCarvel are
-given on the [wiki](https://github.com/marbl/MetaCarvel/wiki).
+# Documentation and tutorial
+[Available on MetaCarvel's wiki](https://github.com/marbl/MetaCarvel/wiki).
 
 # Usage
 
