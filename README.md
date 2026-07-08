@@ -1,8 +1,10 @@
 # MetaCarvel - a scaffolder for metagenomes
 
 MetaCarvel is a successor to
-[Bambus 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC3198580/) and
-[Bambus](https://pmc.ncbi.nlm.nih.gov/articles/PMC314292/).
+[Bambus 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC3198580/)
+(Koren _et al._, 2011) and
+[Bambus](https://pmc.ncbi.nlm.nih.gov/articles/PMC314292/)
+(Pop _et al._, 2004).
 
 To run MetaCarvel, you will need:
 
