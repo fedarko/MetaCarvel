@@ -54,8 +54,19 @@ these files can be useful.
 
 The **final output files** are:
 
-- `scaffolds.fasta` (scaffold sequences, in FASTA format), and
-- `scaffolds.agp` (scaffold paths on contigs, in AGP format).
+- `scaffolds.fasta` (scaffold sequences, in FASTA format),
+- `scaffolds.agp` (scaffold paths on contigs, in AGP format), and
+- `scaffold_graph.gfa` / `oriented.gml` (scaffold graph, in GFA 1 / GML formats).
+
+## Visualizing the scaffold graph
+
+We recommend using [MetagenomeScope](https://github.com/marbl/MetagenomeScope)
+to visualize the scaffold graph. Once you've installed MetagenomeScope, you
+could run the following command to visualize the graph:
+
+```bash
+mgsc -g oriented.gml -a scaffolds.agp
+```
 
 # Publication and Citation
 
